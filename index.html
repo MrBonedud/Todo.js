@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and charset settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title and styling -->
+    <title>Todo.JS</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- Google Fonts and favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="dist/images/favicon.ico"> <!-- Webpack will handle this -->
+<link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+    <!-- Page header with application name -->
+    <header class="header">
+        <div class="logo">
+            <h1 class="page-name">Todo.JS</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Navigation section with default and user projects -->
+        <nav class="nav" id="nav">
+            <!-- Default project buttons (Inbox, Today, This Week) -->
+            <div class="default-projects-list">
+                <button class="button-default-project" id="button-inbox-projects">
+                    <img class="sidebar-img" id="inbox" alt="Inbox Icon">
+                    Inbox
+                </button>
+                <button class="button-default-project" id="button-today-projects">
+                    <img class="sidebar-img" id="calendar-today" alt="Today Icon">
+                    Today
+                </button>
+                <button class="button-default-project" id="button-week-projects">
+                    <img class="sidebar-img" id="calendar-week" alt="This Week Icon">
+                    This Week
+                </button>
+            </div>
+
+            <!-- User-created projects section -->
+            <h1 class="projects-title">Projects</h1>
+            <div class="projects-list" id="projects-list"></div>
+
+            <!-- Button to add new projects -->
+            <button class="button-add-project" id="button-add-project">
+                <img class="sidebar-img" id="plus-box" alt="Add Project Icon">
+                Add Project
+            </button>
+
+            <!-- Popup for adding new projects -->
+            <div class="add-project-popup" id="add-project-popup">
+                <input class="input-add-project-popup" id="input-add-project-popup" type="text" />
+                <div class="add-project-popup-buttons">
+                    <button class="button-add-project-popup" id="button-add-project-popup">Add</button>
+                    <button class="button-cancel-project-popup" id="button-cancel-project-popup">Cancel</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content area for displaying project tasks -->
+        <div class="project-preview" id="project-preview"></div>
+    </main>
+
+    <!-- Main JavaScript bundle -->
+    <script src="bundle.js"></script>
+</body>
+</html>

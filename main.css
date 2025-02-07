@@ -1,0 +1,446 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/CSS/styles.css ***!
+  \**********************************************************************/
+:root {
+  --primary-dark: #333;
+  --secondary-dark: #444;
+  --primary-light: #eee;
+  --secondary-light: #ddd;
+  --success-color: #4CAF50;
+  --danger-color: #f44336;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --active-bg: rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and Base Styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+/* Button and Input Styles */
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: none;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--secondary-light);
+  cursor: text;
+}
+
+/* Layout */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  height: 64px;
+}
+
+.page-name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 64px);
+}
+
+/* Navigation */
+.nav {
+  flex: 0 0 280px;
+  background-color: var(--secondary-light);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Default Projects */
+.default-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.button-default-project {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.button-default-project:hover {
+  background-color: var(--hover-bg);
+}
+
+.button-default-project.active {
+  background-color: var(--active-bg);
+}
+
+/* Projects Section */
+.projects-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 16px 0 8px;
+  padding: 0 12px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Project Buttons */
+.button-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.button-project:hover {
+  background-color: var(--hover-bg);
+}
+
+.button-project.active {
+  background-color: var(--active-bg);
+}
+
+/* Project Panels */
+.left-project-panel,
+.right-project-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.right-project-panel {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.button-project:hover .right-project-panel {
+  opacity: 1;
+}
+
+/* Icons */
+.sidebar-img,
+.task-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.checkbox-svg,
+.delete-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-svg svg,
+.delete-svg svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Tasks */
+.project-preview {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--primary-light);
+  overflow-y: auto;
+}
+
+.project-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--secondary-light);
+  transition: all 0.2s;
+}
+
+.button-task:hover {
+  background-color: var(--secondary-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.left-task-panel,
+.right-task-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Task Content */
+.task-content {
+  margin: 0;
+  font-size: 14px;
+}
+
+.task-content.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.due-date {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Add Project/Task */
+.button-add-project,
+.button-add-task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.button-add-project:hover,
+.button-add-task:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Popups */
+.add-project-popup,
+.add-task-popup {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+.add-project-popup.active,
+.add-task-popup.active {
+  display: flex;
+}
+
+.add-project-popup-buttons,
+.add-task-popup-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.button-add-project-popup,
+.button-add-task-popup {
+  background-color: var(--success-color);
+  color: white;
+  flex: 1;
+}
+
+.button-cancel-project-popup,
+.button-cancel-task-popup {
+  background-color: var(--danger-color);
+  color: white;
+  flex: 1;
+}
+
+/* Input States */
+.input-task-name,
+.input-due-date {
+  display: none;
+}
+
+.input-task-name.active,
+.input-due-date.active {
+  display: block;
+}
+
+/* Icon base styles */
+.sidebar-img,
+.task-icon,
+.checkbox-svg,
+.delete-svg,
+.delete-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+/* Project buttons */
+.button-project,
+.button-default-project {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.left-project-panel,
+.right-project-panel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Add buttons */
+.button-add-project,
+.button-add-task {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    gap: 8px;
+    color: var(--primary-dark);
+    transition: background-color 0.2s;
+}
+
+/* Task buttons */
+.button-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 1px solid var(--secondary-light);
+    border-radius: 4px;
+}
+
+.left-task-panel,
+.right-task-panel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Hover states */
+.button-project:hover .right-project-panel,
+.button-task:hover .right-task-panel {
+    opacity: 1;
+}
+
+.button-project:hover,
+.button-default-project:hover,
+.button-add-project:hover,
+.button-add-task:hover {
+    background-color: var(--hover-bg);
+}
+
+/* SVG specific styles */
+svg {
+    display: block; /* Prevents extra space below icons */
+}
+
+.checkbox-svg:hover,
+.delete-svg:hover,
+.delete-icon:hover {
+    color: var(--danger-color);
+}
+
+.sidebar-img,
+.task-icon,
+.checkbox-svg,
+.delete-svg {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.edit-project-name {
+  font-size: 1rem;
+  padding: 2px 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.button-project span {
+  cursor: text;
+}
+
+.checkbox-icon {
+  transition: filter 0.3s ease;
+}
+
+.checkbox-icon:hover {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .nav {
+    flex: 0 0 auto;
+    max-height: 300px;
+  }
+
+  .project-preview {
+    padding: 16px;
+  }
+}
